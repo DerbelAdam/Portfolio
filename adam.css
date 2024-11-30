@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color:rgba(189, 184, 184, 0.921) ;
+    --second-bg-color:#2d3036 ;
+    --text-color:#fff ;
+    --main-color:#57918c ;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed; /* L'en-tête reste visible même lors du défilement */
+    top: 0; /* Toujours collé en haut */
+    left: 0; /* Toujours aligné sur le côté gauche */
+    width: 100%; /* Occupe toute la largeur de l'écran */
+    padding: 20px;
+    background: rgba(47, 44, 44, 0.8); /* Fond semi-transparent pour un meilleur contraste */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Assure que l'en-tête reste au-dessus des autres éléments */
+}
+
+.logo {
+    font-size: 25px ;
+    color:var(--main-color);
+    text-decoration: none ;
+    font-weight: 600 ;
+    transform: scale(1.1); /* Légère mise en valeur */
+    transition: 0.3s ease; /* Transition fluide */
+}
+
+.navigation a {
+    font-size: 18px ;
+    color: var(--text-color) ;
+    text-decoration: none ;
+    font-weight: 500 ;
+    margin-left: 30px ;
+}
+
+.navigation a:hover, 
+.navigation a.active {
+    color:var(--main-color) ;
+}
+
+/* home section */
+
+.Home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    background-image: url(4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Home h2 {
+    font-size: 25 px;
+    margin-bottom: 7%;
+    margin-top: 20%;
+    color:white ;
+    text-align: center ;
+}
+
+.Home h2 span {
+    font-size: 60px;
+    margin-top: 15%;
+    color:white ;
+    text-align: center ;
+}
+
+.Home h3 {
+    margin-top: 0px;
+    font-size: 30px;
+    color:white ;
+    text-align: center ;
+}
+
+.social-icons {
+    height: 15vh ;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #21bbaf ;
+    font-size: 1.5em ;
+    padding-right: 25px ;
+}
+
+.social-icons a:hover {
+    color: rgb(60, 210, 230); /* Change la couleur au survol */
+    transform: scale(1.2); /* Agrandit légèrement l'icône */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition fluide */
+}
+
+/*-- about me section --*/
+
+.about{
+    padding: 80px 40px 275px 40px;
+    color: #ababab;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col1{
+    flex-basis: 35%;
+}
+.col1 img{
+    width: 80%;
+    height: 120%;
+    border-radius: 40px;
+}
+.col2{
+    flex-basis: 60%;
+}
+.sb{
+    font-size: 40px;
+    font-weight: bold;
+    color: #45898d ;
+}
+
+.about p {
+    font-size: 30px;
+}
+
+/*-- End of about me section --*/
+
+/*-- skills section --*/
+
+.skills{
+    margin: 10px 50px 50px 500px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.title h2 {
+    padding-left: 20%;
+    font-size: 75px;
+    font-weight: 700 ;
+    color: #45898d ;
+}
+
+.skill{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skilo{
+    display: flex;
+    align-items: center;
+}
+
+.skill_name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 20px 10px 20px 10px;
+}
+
+.skill_bar{
+    height: 14px;
+    background: #fff;
+    border-radius: 3px;  
+}
+.skill_per{
+    height: 14px;
+    background-color: #45898d ;
+    border-radius: 3px;
+    position: relative;
+}
+.skill_per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 10px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+/*-- End of skills section --*/
+
+/*-- education section --*/
+
+
+
+.edu{
+    margin: 0;
+    font-family: sans-serif;
+    color: #fff;
+    padding: 2em;
+}
+
+.edu ::before {
+    content: ' ';
+    background: rgba(6, 6, 6, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+}
+
+.edu h1 {
+    margin: 0.3 rem;
+    font-size: 3rem;
+}
+
+.edu h3 {
+    color: var(--main-color);
+}
+
+.edu h2 {
+    margin-bottom: 0.5rem;
+}
+
+.title0 {
+    text-align: center;
+    color:var(--main-color);
+}
+
+.timline {
+    margin: 5rem auto;
+    max-width: 34.15em;
+}
+
+.checkpoint {
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.checkpoint div {
+    border: 2px solid #888;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.checkpoint p {
+    line-height: 27px;
+    color: #ccc;
+}
+
+.checkpoint {
+    border-left: 3px solid #888;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+
+.checkpoint ::before {
+    content: ' ';
+    background: #888;
+    width: 2em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.checkpoint div::before {
+    content: ' ';
+    background: var(--main-color);
+    box-shadow: 0 0 0.5em #0d71fc;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute ;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    left: -0.5em;
+}
+
+.checkpoint div:hover {
+    box-shadow: 2px 3px 12px 2px var(--main-color);
+    border: 1px solid transparent;
+}
+
+
+/*-- End of education section --*/
+
+/*-- Contact section --*/
+
+/* contact section */
+.contact-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1d1e1f;
+    color: #fff;
+}
+
+.contact-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-container .subtext {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+/* Icônes sociales */
+.contact-container .icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-container .icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.contact-container .icon.linkedin {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/linkedin-circled--v1.png');
+}
+
+.contact-container .icon.facebook {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/facebook-circled--v1.png');
+}
+
+.contact-container .icon.email {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/email-open--v1.png');
+}
+
+.contact-container .icon:hover {
+    transform: scale(1.1);
+}
+
+.contact-container .icon.instagram {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.contact-container .icon.instagram:hover {
+    transform: scale(1.1);
+}
+/*-- End of contact section --*/
+
+
+
+
+
